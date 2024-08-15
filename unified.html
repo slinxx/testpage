@@ -10,124 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <style id="common">
-    #AmazonExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/amazon.svg);
-    }
-
-    #AmazonExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/amazon.svg);
-    }
-
-    #FacebookExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/facebook.svg);
-    }
-
-    #FacebookExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/facebook.svg);
-    }
-
-    #GitHubExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/github.svg);
-    }
-
-    #GitHubExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/github.svg);
-    }
-
-    #AppleExchange,
-    #AppleManagedExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/apple.svg);
-    }
-
-    #AppleExchange:hover,
-    #AppleManagedExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/apple.svg);
-    }
-
-    #GoogleExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/google.svg);
-    }
-
-    #GoogleExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/google.svg);
-    }
-
-    #LinkedInExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/linkedin.svg);
-    }
-
-    #LinkedInExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/linkedin.svg);
-    }
-
-    #MicrosoftAccountExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/microsoft.svg);
-    }
-
-    #MicrosoftAccountExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/microsoft.svg);
-    }
-
-    #QQExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/qq.svg);
-    }
-
-    #QQExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/qq.svg);
-    }
-
-    #TwitterExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/twitter.svg);
-    }
-
-    #TwitterExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/twitter.svg);
-    }
-
-    #WeChatExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/wechat.svg);
-    }
-
-    #WeChatExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/wechat.svg);
-    }
-
-    #WeiboExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/weibo.svg);
-    }
-
-    #WeiboExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/weibo.svg);
-    }
-
     .buttons #cancel:before {
-      content: "<";
-    }
-  </style>
-  <style id="idpselector">
-    #SignInWithLogonNameExchange,
-    #SignUpWithLogonEmailExchange,
-    #SignUpWithLogonNameExchange {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/local.svg);
-    }
-
-    #SignInWithLogonNameExchange:hover,
-    #SignUpWithLogonEmailExchange:hover,
-    #SignUpWithLogonNameExchange:hover {
-      background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/white/local.svg);
-    }
-
-    #SignUpWithLogonEmailExchange.text-link {
-      background-image: none;
-      background-color: transparent !important;
-    }
-
-    #SignUpWithLogonEmailExchange.text-link:hover {
-      background-image: none;
-      background-color: transparent !important;
+      content: "\e5c4";
     }
   </style>
 
@@ -139,7 +27,7 @@
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
+      font-family: "Noto Sans", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
@@ -209,11 +97,11 @@
       margin: 0 auto
     }
 
-    .heading {    
+    .heading {
       display: none;
     }
 
-    .header {    
+    .header {
       margin-top: 20px;
       margin-bottom: 10px;
     }
@@ -1203,12 +1091,14 @@
 
             <h2 class="text-center header">ONRSR Portal</h2>
             <div class="alert alert-warning" role="alert">
-              Access to the portal is restricted to specific in your organisation. Please contact your organization’s ONRSR Portal administrator to request access.
+              Access to the portal is restricted to specific in your organisation. Please contact your organization’s
+              ONRSR Portal administrator to request access.
             </div>
-            
+
             <div id="api" role="main">
             </div>
-            <p><small>If you are having trouble logging into the system please contact the Help Desk on <a href="tel:+1300 459 941"><b>1300 459 941</b></a>.</small></p>
+            <p><small>If you are having trouble logging into the system please contact the Help Desk on <a
+                  href="tel:+1300 459 941"><b>1300 459 941</b></a>.</small></p>
 
           </div>
         </div>
