@@ -8,20 +8,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
   <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <style id="common">
-    @font-face {
-      font-family: 'SegoeUI';
-      src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui.WOFF);
-      font-weight: normal;
-    }
-
-    @font-face {
-      font-family: 'SegoeUI';
-      src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui_bold.WOFF);
-      font-weight: bold;
-    }
-
     #AmazonExchange {
       background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/amazon.svg);
     }
@@ -113,7 +104,7 @@
     }
 
     .buttons #cancel:before {
-      content: url(https://login.microsoftonline.com/templates/src/images/left-arrow.svg);
+      content: "<";
     }
   </style>
   <style id="idpselector">
@@ -148,7 +139,10 @@
     }
 
     body {
-      font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "DM Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
       background-attachment: fixed;
       background-color: #fff;
       background-position: center;
@@ -334,6 +328,7 @@
       border: none;
       color: #fff;
       font-size: 1em;
+      font-weight: 500;
       margin-top: 10px
     }
 
@@ -1219,6 +1214,35 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Parse the URL
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Extract the 'claimsexchange' value
+      const claimsexchange = urlParams.get('claimsexchange');
+
+      // Update HTML content based on the extracted value using a switch statement
+      if (claimsexchange) {
+        const claimsexchangeElement = document.querySelector("#claimsexchange");
+        if (claimsexchangeElement) {
+          switch (claimsexchange) {
+            case 'ForgotPassword':
+              claimsexchangeElement.textContent = "Forgot Password";
+              break;
+            case 'SignUp':
+              claimsexchangeElement.textContent = "Sign Up";
+              break;
+            case 'SignIn':
+              claimsexchangeElement.textContent = "Sign In";
+              break;
+            default:
+              claimsexchangeElement.textContent = "Unknown Action";
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
