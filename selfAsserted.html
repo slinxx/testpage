@@ -931,6 +931,9 @@
       visibility: hidden;
       display: none;
     }
+    .helpinfo{
+      margin-top: 20px;
+    }
   </style>
   </style>
 </head>
@@ -947,43 +950,13 @@
             <img class="companyLogo" data-tenant-branding-logo="true" alt="Company Logo">
             <div id="api" role="main">
             </div>
-            <p><small>If you are having trouble logging into the system please contact the Help Desk on <a
+            <p class="helpinfo"><small>If you are having trouble with this form, please contact the Help Desk on <a
                   href="tel:+1300 459 941"><b>1300 459 941</b></a>.</small></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Parse the URL
-      const urlParams = new URLSearchParams(window.location.search);
-
-      // Extract the 'claimsexchange' value
-      const claimsexchange = urlParams.get('claimsexchange');
-
-      // Update HTML content based on the extracted value using a switch statement
-      if (claimsexchange) {
-        const headingElement = document.querySelector(".heading h1");
-        if (headingElement) {
-          switch (claimsexchange) {
-            case 'ForgotPassword':
-              headingElement.textContent = "Forgot Password";
-              break;
-            case 'SignUp':
-              headingElement.textContent = "Sign Up";
-              break;
-            case 'SignIn':
-              headingElement.textContent = "Sign In";
-              break;
-            default:
-              headingElement.textContent = "Update Details";
-          }
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>
