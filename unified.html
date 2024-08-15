@@ -13,12 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <style id="common">
-    .buttons #cancel:before {
-      font-family: "Material Icons";
-      content: "\e5c4";
-    }
-  </style>
 
   <style>
     /* Following are generated styles via gulp. */
@@ -227,7 +221,9 @@
     }
 
     .buttons button[aria-disabled=true] {
-      opacity: .3
+      opacity: .3;
+      pointer-events: none;
+      cursor: not-allowed;
     }
 
     .buttons button:not([aria-disabled=true]) {
@@ -235,7 +231,7 @@
     }
 
     .buttons #cancel {
-      padding: 0;
+      padding: 0px 10px;
       margin-left: auto;
       background: 0 0;
       border: 0;
@@ -244,21 +240,24 @@
       background-color: transparent;
       top: 2px;
       left: 15px;
-      font-size: 1em;
+      font-size: .9em;
       color: #505050;
       box-shadow: none;
       text-align: left
     }
-
+    .buttons #cancel:before {
+      font-family: "Material Icons";
+      content: "\e5c4";
+    }
     .buttons #cancel:hover {
       color: #000 !important
     }
 
     .buttons #cancel:before {
-      padding: 10px;
-      vertical-align: sub;
+      position: relative;
+      top: 2px;
+      padding: 0 5px 0 0;
       zoom: 90%;
-      display: inline-block
     }
 
     #attributeList ul {
@@ -1109,8 +1108,7 @@
 
             <div id="api" role="main">
             </div>
-            <p class="helpinfo"><small>If you are having trouble with this form, please contact the Help Desk on <a
-                  href="tel:+1300 459 941"><b>1300 459 941</b></a>.</small></p>
+            <p class="helpinfo"><small>If you are having trouble with this form, please contact the Help Desk on <b>1300 459 941</b>.</small></p>
           </div>
         </div>
       </div>
