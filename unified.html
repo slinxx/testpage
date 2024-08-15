@@ -850,7 +850,8 @@
 
     .unified_container .row .panel-default #api .localAccount .error {
       color: #b00;
-      text-align: left
+      text-align: left;
+      margin-bottom: 5px
     }
 
     .unified_container .row .panel-default #api .localAccount .entry .buttons {
@@ -1214,35 +1215,6 @@
       </div>
     </div>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Parse the URL
-      const urlParams = new URLSearchParams(window.location.search);
-
-      // Extract the 'claimsexchange' value
-      const claimsexchange = urlParams.get('claimsexchange');
-
-      // Update HTML content based on the extracted value using a switch statement
-      if (claimsexchange) {
-        const claimsexchangeElement = document.querySelector("#claimsexchange");
-        if (claimsexchangeElement) {
-          switch (claimsexchange) {
-            case 'ForgotPassword':
-              claimsexchangeElement.textContent = "Forgot Password";
-              break;
-            case 'SignUp':
-              claimsexchangeElement.textContent = "Sign Up";
-              break;
-            case 'SignIn':
-              claimsexchangeElement.textContent = "Sign In";
-              break;
-            default:
-              claimsexchangeElement.textContent = "Unknown Action";
-          }
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>
